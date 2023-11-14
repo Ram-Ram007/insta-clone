@@ -39,3 +39,24 @@ Answers:
 
 - Edina needs to know the post count which are liked by others. 
 	SELECT COUNT(distinct posts.postid) FROM posts inner join likes on posts.postid = likes.postid where posts.userid = 1;
+
+- Paula needs to check the count of awarness and trickes likes count.
+	SELECT COUNT(likes.likeid)
+	FROM likes where likes.postid = 17 or likes.postid=20;
+
+- List Posts of Edina which has likes and also not liked posts.
+	SELECT COUNT(likes.likeid) FROM likes where likes.postid = 17 or likes.postid=19;
+
+- Search all users posts with Text "sal".
+	SELECT * FROM posts WHERE postcontent LIKE '%sal%';
+
+
+- Get the count of colin posts.
+	SELECT COUNT(*) FROM posts WHERE userid = 2;
+
+- Get count of likes for the post cartoon. user colin.
+	select COUNT(likes.likeid) AS cartoon_likes from likes where likes.postid = 7;
+
+- Get the maximum likes posts.
+	select postid, count(postid) from likes GROUP BY postid HAVING COUNT(postid)>1 order by count(postid) desc limit 2;
+
