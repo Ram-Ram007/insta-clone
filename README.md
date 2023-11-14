@@ -60,3 +60,11 @@ Answers:
 - Get the maximum likes posts.
 	select postid, count(postid) from likes GROUP BY postid HAVING COUNT(postid)>1 order by count(postid) desc limit 2;
 
+- In Edina, sort posts by title in forward.
+	select * from posts where userid=1 ORDER BY postcontent;
+
+- In Paula, sort post by date backward.
+	select * from posts where userid=4 ORDER BY postdate DESC;
+
+- Filter today posted posts.
+	select * from posts where postdate= 'today';
