@@ -77,3 +77,8 @@ Answers:
     university_id SERIAL PRIMARY KEY,
     university_name VARCHAR
 );
+CREATE TABLE college (
+    college_id SERIAL PRIMARY KEY,
+    college_name VARCHAR,
+    university_id INTEGER REFERENCES university(university_id)
+);
