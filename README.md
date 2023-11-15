@@ -68,3 +68,6 @@ Answers:
 
 - Filter today posted posts.
 	select * from posts where postdate= 'today';
+
+
+# University database
