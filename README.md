@@ -82,3 +82,7 @@ CREATE TABLE college (
     college_name VARCHAR,
     university_id INTEGER REFERENCES university(university_id)
 );
+CREATE TABLE course (
+    course_id SERIAL PRIMARY KEY,
+    course_name VARCHAR
+);
