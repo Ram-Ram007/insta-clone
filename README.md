@@ -86,3 +86,8 @@ CREATE TABLE course (
     course_id SERIAL PRIMARY KEY,
     course_name VARCHAR
 );
+CREATE TABLE college_course (
+    college_course_id SERIAL PRIMARY KEY,
+    college_id INTEGER REFERENCES college(college_id),
+    course_id INTEGER REFERENCES course(course_id)
+);
