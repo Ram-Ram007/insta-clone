@@ -71,3 +71,9 @@ Answers:
 
 
 # University database
+
+
+- CREATE TABLE university (
+    university_id SERIAL PRIMARY KEY,
+    university_name VARCHAR
+);
