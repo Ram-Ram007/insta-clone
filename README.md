@@ -98,3 +98,4 @@ CREATE TABLE course_subject (
     college_course_id INTEGER REFERENCES college_course (college_course_id),
     subject_id INTEGER REFERENCES subject(subject_id)
 );
+create table semester(semester_id  SERIAL PRIMARY KEY NOT NULL, month VARCHAR NOT null,year INTEGER NOT null);
