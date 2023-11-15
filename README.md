@@ -93,3 +93,8 @@ CREATE TABLE college_course (
 );
 create table subject(
 subject_id serial primary key not null , subject_name VARCHAR not null);
+CREATE TABLE course_subject (
+    course_subject_id SERIAL PRIMARY KEY NOT NULL,
+    college_course_id INTEGER REFERENCES college_course (college_course_id),
+    subject_id INTEGER REFERENCES subject(subject_id)
+);
