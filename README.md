@@ -245,7 +245,19 @@ INSERT INTO public.marks (student_id,semester_id,marks,subject_id) VALUES
 
 - completed first task
 
-
+Task - 2
+----------
+Querys
+------
+- get students count college wise
+- get students count in a college, course wise
+- get the university rank holder across all courses(1 student)
+- get the list of rank holders each course
+- get the college topper across all courses
+- get the college toppers each course
+- get the failed students count each subject 
+- get over all students list with semester marks
+- get the student list who wasnt appear to the exams
 	
 	
 	
