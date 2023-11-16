@@ -155,9 +155,55 @@ insert into subject (subject_name) values('engineering mechanics'),('data base')
 
 
 
+insert into college_course (college_id,course_id) values(1,1),(1,2),(1,3),(1,4),(1,5);
+insert into college_course (college_id,course_id) values(2,1),(2,2),(2,3),(2,4),(2,5);
+insert into college_course (college_id,course_id) values(3,1),(3,2),(3,3),(3,4),(3,5);
+insert into college_course (college_id,course_id) values(4,1),(4,2),(4,3),(4,4),(4,5);
+insert into college_course (college_id,course_id) values(5,1),(5,2),(5,3),(5,4),(5,5);
 
+insert into course_subject(subject_id,course_id) values(1,1),(2,1),(8,1),(9,1),(10,1),(2,2),(4,2),(5,2),(6,2),(7,2),(2,3),(3,3),(5,3),(6,3),(7,3),
+(2,4),(3,4),(5,4),(6,4),(7,4),(1,5),(2,5),(8,5),(9,5),(10,5);
+
+
+alter table semester rename "month" to "sem_month";
+alter table semester rename "year" to "sem_year";
+
+
+insert into semester(sem_month,sem_year)
+values ('april',2023);
+
+
+ALTER TABLE student
+ALTER COLUMN phone
+TYPE bigint;
+
+ALTER TABLE student
+drop column year_of_join;
+
+ALTER TABLE student
+add column year_joined integer;
+
+
+ALTER TABLE student
+drop column dob;
+
+	ALTER TABLE student
+	add column d_o_b date;
+
+
+
+
+
+INSERT INTO public.student (student_name,phone,address,college_id,course_id,year_joined,d_o_b) VALUES
+	 ('Rin',9092434586,'Puducherry',1,1,2022,'2001-04-11'),
+	 ('Naruto',9392434596,'Puducherry',2,2,2022,'2001-03-03'),
+	 ('Sakura',9876453765,'Puducherry',3,3,2022,'2000-11-04'),
+	 ('Sasuke',8765897654,'Puducherry',4,4,2022,'2001-07-19'),
+	 ('Itachi',6876543278,'Leaf village',5,5,2022,'2001-12-01');
+	 
 	
 	
+
 	
 	
 	
