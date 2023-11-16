@@ -267,6 +267,7 @@ SELECT
     ) AS student_count
 FROM college c;
 
+
 - get students count in a college, course wise
 - get the university rank holder across all courses(1 student)
 - get the list of rank holders each course
