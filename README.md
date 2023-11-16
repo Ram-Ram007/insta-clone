@@ -256,7 +256,16 @@ FROM college c
 JOIN student s ON c.college_id = s.college_id
 GROUP BY c.college_name;
 
-	
+	(or)
+
+SELECT
+    c.college_name,
+    (
+        SELECT COUNT(*)
+        FROM student s
+        WHERE s.college_id = c.college_id
+    ) AS student_count
+FROM college c;
 
 - get students count in a college, course wise
 - get the university rank holder across all courses(1 student)
