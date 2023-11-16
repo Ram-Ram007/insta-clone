@@ -243,8 +243,7 @@ INSERT INTO public.marks (student_id,semester_id,marks,subject_id) VALUES
 - design the table structure and relationships
 - feed necessary data to query the output
 
-	
-	
+- completed first task
 	
 	
 	
