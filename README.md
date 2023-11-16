@@ -139,6 +139,22 @@ add column course_id INTEGER REFERENCES course(course_id);
 
 --insert 
 
+insert into university ( university_name ) values ('pondicherry university;')
+
+insert into college (college_name, university_id) values('rajiv gandhi college of engineering and technology',1);
+insert into college (college_name, university_id) values('Ganesh college college of enginering',1),
+('manakula vinayagar institute of technology',1),
+('venkateshwara engineering pondicherry',1),
+('puducherry technological university',1);
+
+insert into course (course_name) values ('computer science engineering'),('electrical and electronics engineering'),
+('electrical and computer engineering'),('mechanical engineering'),('information technology engineering');
+
+insert into subject (subject_name) values('computer programming'),('maths1'),('termodynamics'),('physics'),('chemistry'),('electrical and electronics');
+insert into subject (subject_name) values('engineering mechanics'),('data base'),('cloud computing'),('artificial intelligence ');
+
+
+
 
 	
 	
