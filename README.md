@@ -249,24 +249,23 @@ Task - 2
 ----------
 Querys
 ------
-- get students count college wise
+- 1.) get students count college wise
 
-	- SELECT c.college_name, COUNT(s.student_id) AS student_count
-FROM college c
-JOIN student s ON c.college_id = s.college_id
-GROUP BY c.college_name;
+	- SELECT college.college_name, COUNT(student.student_id) AS student_count
+FROM college
+JOIN student ON college.college_id = student.college_id
+GROUP BY college.college_name;
 
 	(or)
 
 SELECT
-    c.college_name,
+    college.college_name,
     (
         SELECT COUNT(*)
-        FROM student s
-        WHERE s.college_id = c.college_id
+        FROM student
+        WHERE student.college_id = college.college_id
     ) AS student_count
-FROM college c;
-
+FROM college;
 
 - get students count in a college, course wise
 - get the university rank holder across all courses(1 student)
